@@ -1,9 +1,6 @@
 # Compiled class file
 *.class
 
-# Log file
-*.log
-
 # BlueJ files
 *.ctxt
 
@@ -19,5 +16,46 @@
 *.tar.gz
 *.rar
 
+# Maven
+target
+dependency-reduced-pom.xml
+
+#Node.js
+node
+node_modules
+npm-debug.log
+
+# Log file
+*.log
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# Git
+*.rej
+*.orig
+.gitreview
+
+# VS Code
+.vscode
+**/.factorypath
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+.idea
+
+# Eclipse
+.classpath
+.project
+.settings
+
+#vim
+*.swp
+
+#Oxygen
+__MACOSX
+
+#OSX
+.DS_Store
