@@ -9,13 +9,13 @@
 
 
 ## To patch the Log4j jars
-Step 1: cd <temporary path where the analyze and patch script are downloaded>
+Step 1: cd ```<temporary path where the analyze and patch script are downloaded>```
 Step 2: To run the script, use the following command.
-sh patch.sdc.sh patch <Option1> <Option2>
---Option1 : $SDC_DIST  Directory path
---Option2 : Flag to remove the JndiLookup.class.
-		    If set to true, old log4j jars will be replaced by log4j 2.17.0 jars and JndiLookup.class will be removed from new log4j jars and databricks-jdbc42-*.jar
-		    If set to false, only old log4j jars will be replaced with new log4j jars.
+sh patch.sdc.sh patch ```<Option1>``` ```<Option2>```<br />
+--Option1 : $SDC_DIST  Directory path <br />
+--Option2 : Flag to remove the JndiLookup.class. <br />
+		    If set to true, old log4j jars will be replaced by log4j 2.17.0 jars and JndiLookup.class will be removed from new log4j jars and databricks-jdbc42-*.jar <br />
+		    If set to false, only old log4j jars will be replaced with new log4j jars.<br />
 
 eg., sh patch.sdc.sh patch /user/root/sdc_home/ true
 
