@@ -6,22 +6,22 @@
 
 downloadArtifacts()
 {
-  curl -o log4j-1.2-api-2.17.0.jar    https://repo1.maven.org/maven2/org/apache/logging/log4j/log4j-1.2-api/2.17.0/log4j-1.2-api-2.17.0.jar
-  curl -o log4j-api-2.17.0.jar        https://repo1.maven.org/maven2/org/apache/logging/log4j/log4j-api/2.17.0/log4j-api-2.17.0.jar
-  curl -o log4j-core-2.17.0.jar       https://repo1.maven.org/maven2/org/apache/logging/log4j/log4j-core/2.17.0/log4j-core-2.17.0.jar
-  curl -o log4j-web-2.17.0.jar        https://repo1.maven.org/maven2/org/apache/logging/log4j/log4j-web/2.17.0/log4j-web-2.17.0.jar
-  curl -o log4j-slf4j-impl-2.17.0.jar https://repo1.maven.org/maven2/org/apache/logging/log4j/log4j-slf4j-impl/2.17.0/log4j-slf4j-impl-2.17.0.jar
+  curl -o log4j-1.2-api-2.17.1.jar    https://repo1.maven.org/maven2/org/apache/logging/log4j/log4j-1.2-api/2.17.1/log4j-1.2-api-2.17.1.jar
+  curl -o log4j-api-2.17.1.jar        https://repo1.maven.org/maven2/org/apache/logging/log4j/log4j-api/2.17.1/log4j-api-2.17.1.jar
+  curl -o log4j-core-2.17.1.jar       https://repo1.maven.org/maven2/org/apache/logging/log4j/log4j-core/2.17.1/log4j-core-2.17.1.jar
+  curl -o log4j-web-2.17.1.jar        https://repo1.maven.org/maven2/org/apache/logging/log4j/log4j-web/2.17.1/log4j-web-2.17.1.jar
+  curl -o log4j-slf4j-impl-2.17.1.jar https://repo1.maven.org/maven2/org/apache/logging/log4j/log4j-slf4j-impl/2.17.1/log4j-slf4j-impl-2.17.1.jar
 }
 
 searchArtifacts()
 {
   rootFolder=$1
 
-  find $rootFolder -type f -name "log4j-1.2-api-2.*.jar"     | while read jarFile; do replaceArtifact $jarFile log4j-1.2-api-2.17.0.jar; done
-  find $rootFolder -type f -name "log4j-api-2.*.jar"         | while read jarFile; do replaceArtifact $jarFile log4j-api-2.17.0.jar; done
-  find $rootFolder -type f -name "log4j-core-2.*.jar"        | while read jarFile; do replaceArtifact $jarFile log4j-core-2.17.0.jar; done
-  find $rootFolder -type f -name "log4j-web-2.*.jar"         | while read jarFile; do replaceArtifact $jarFile log4j-web-2.17.0.jar; done
-  find $rootFolder -type f -name "log4j-slf4j-impl-2.*.jar"  | while read jarFile; do replaceArtifact $jarFile log4j-slf4j-impl-2.17.0.jar; done
+  find $rootFolder -type f -name "log4j-1.2-api-2.*.jar"     | while read jarFile; do replaceArtifact $jarFile log4j-1.2-api-2.17.1.jar; done
+  find $rootFolder -type f -name "log4j-api-2.*.jar"         | while read jarFile; do replaceArtifact $jarFile log4j-api-2.17.1.jar; done
+  find $rootFolder -type f -name "log4j-core-2.*.jar"        | while read jarFile; do replaceArtifact $jarFile log4j-core-2.17.1.jar; done
+  find $rootFolder -type f -name "log4j-web-2.*.jar"         | while read jarFile; do replaceArtifact $jarFile log4j-web-2.17.1.jar; done
+  find $rootFolder -type f -name "log4j-slf4j-impl-2.*.jar"  | while read jarFile; do replaceArtifact $jarFile log4j-slf4j-impl-2.17.1.jar; done
   if [ "${patchFiles}" = "true" ]; then
     find $rootFolder -type f -name "databricks-jdbc42-*.jar" | while read jarFile; do patchArtifact $jarFile; done
   fi
