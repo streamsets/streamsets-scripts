@@ -2,7 +2,7 @@
 #
 # Copyright (c) 2021 StreamSets Inc.
 #
-# This script addresses Log4J vulnerabilities CVE-2021-44228, CVE-2021-45046, CVE-2021-45105 and LOG4J2-3230
+# This script addresses Log4J vulnerabilities CVE-2021-44228, CVE-2021-44832, CVE-2021-45046, CVE-2021-45105 and LOG4J2-3230
 
 downloadArtifacts()
 {
